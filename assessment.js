@@ -130,15 +130,15 @@ console.log(removeItem(['h','e','l','l','o'],'l'))
 // #11 Write a function  called doubleTheFun that takes 1 parameter. It should double numbers, and
 // repeats strings. example 4->8, 2.5->5, 'Awesome'->'AwesomeAwesome'
 
-function doubleTheFun(par){
-	if(par===){
-		Number(par)
-		return par*2
-	}else{
-		return par*2
-	}
-}
-console.log(doubleTheFun('fun'))
+// function doubleTheFun(par){
+// 	if(par===){
+// 		Number(par)
+// 		return par*2
+// 	}else{
+// 		return par*2
+// 	}
+// }
+// console.log(doubleTheFun('fun'))
 // #12 Write function getValueOfProperty that takes in an object, and the name of a property on the object
 // return the value from the object that corresponds to the property
 function getValueOfProperty(obj,Name){
@@ -163,18 +163,30 @@ var coderTest = (obj) => {
 	var code=[]
 	code.push(obj)
 	for(var i =0;i<code.length;i++){
-		var val = code.name[i]
+		var val = obj.name
 		console.log(val)
 		if(val==="Jeremy"){
 			obj.lovesCode = 10;
-		}
-		if(val==='Brack'){
+		} else if(val==='Brack'){
 			obj.lovesCode = 0;
 		}else{
 			obj.lovesCode=5;
 		}
 	}
+	return obj;
 } 
+var Jeremy = {
+	name: 'Jeremy',
+}
+var Brack = {
+	name: 'Brack'
+}
+var John = {
+	name: 'John'
+}
+console.log(coderTest(Jeremy))
+console.log(coderTest(Brack))
+console.log(coderTest(John))
 
 // #15 Create a function called outside that takes in a temperature (number), a humidity(number), and a cloudiness(number), in that order. Using the following to return the correct values
 /*
